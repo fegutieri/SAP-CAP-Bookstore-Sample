@@ -5,6 +5,16 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
+                Value : title,
+                Label : 'Book Name',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : genre_code,
+                Label : 'Genre',
+            },
+            {
+                $Type : 'UI.DataField',
                 Label : '{i18n>Publishedat}',
                 Value : publishedAt,
             },
@@ -15,8 +25,12 @@ annotate service.Books with @(
             },
             {
                 $Type : 'UI.DataField',
-                Label : '{i18n>Price2}',
                 Value : price,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : currency_code,
+                Label : 'Currency',
             },
             {
                 $Type : 'UI.DataField',
@@ -61,7 +75,7 @@ annotate service.Books with @(
         {
             $Type : 'UI.DataField',
             Label : '{i18n>Genre}',
-            Value : genre,
+            Value : genre_code,
         },
         {
             $Type : 'UI.DataField',
@@ -104,7 +118,7 @@ annotate service.Books with @(
         TypeNamePlural : '{i18n>Books}',
         Description : {
             $Type : 'UI.DataField',
-            Value : genre,
+            Value : genre_code,
         },
         TypeImageUrl : 'sap-icon://course-book',
     },
@@ -203,4 +217,24 @@ annotate service.Bookstatus with {
         Common.Text.@UI.TextArrangement : #TextOnly,
     )
 };
+
+annotate service.Books with {
+    currency @Common.ValueListWithFixedValues : true
+};
+
+annotate service.Books with {
+    genre @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'GenreVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : genre_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+)};
 

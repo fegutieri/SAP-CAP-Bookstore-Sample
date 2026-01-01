@@ -1,6 +1,7 @@
 using {
     cuid,
-    managed
+    managed,
+    sap.common.Currencies
 } from '@sap/cds/common';
 
 namespace tutorial.db;
@@ -8,14 +9,31 @@ namespace tutorial.db;
 entity Books : cuid, managed {
     title       : String;
     author      : Association to Authors;
-    genre       : String;
+    genre       : Association to Genres;
     publishedAt : Date;
     pages       : Integer;
     price       : Decimal(9, 2);
+    currency    : Association to Currencies;
     stock       : Integer;
     status      : Association to Bookstatus;
     Chapters    : Composition of many Chapters
                       on Chapters.book = $self;
+}
+
+entity Genres {
+    key code        : Genre;
+        description : String;
+}
+
+type Genre : String enum {
+    Fantasy = 'Fantasy';
+    Dystopian = 'Dystopian';
+    SciFy = 'Science Fiction';
+    Classic = 'Classic';
+    Thriller = 'Thriller';
+    Horror = 'Horror';
+    Mystery = 'Mistery';
+    History = 'History';
 }
 
 entity Bookstatus {
