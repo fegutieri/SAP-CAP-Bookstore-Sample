@@ -104,6 +104,16 @@ annotate service.Books with @(
             Criticality : status.criticality,
             CriticalityRepresentation : #WithIcon,
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookService.addStock',
+            Label : 'Add Stock',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookService.changePublishDate',
+            Label : 'Change Publish Date',
+        },
     ],
     UI.SelectionFields : [
         price,
@@ -147,6 +157,23 @@ annotate service.Books with @(
             },
         ],
     },
+    UI.Identification : [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookService.addStock',
+            Label : 'addStock',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookService.changePublishDate',
+            Label : 'Change Publish Date',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookService.changeStatus',
+            Label : 'Change Status',
+        },
+    ],
 );
 
 annotate service.Books with {
