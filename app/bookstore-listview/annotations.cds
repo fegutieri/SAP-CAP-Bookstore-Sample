@@ -5,11 +5,6 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : '{i18n>Genre}',
-                Value : genre,
-            },
-            {
-                $Type : 'UI.DataField',
                 Label : '{i18n>Publishedat}',
                 Value : publishedAt,
             },
@@ -25,13 +20,15 @@ annotate service.Books with @(
             },
             {
                 $Type : 'UI.DataField',
-                Label : '{i18n>Stock}',
-                Value : stock,
+                Label : '{i18n>Statuscode}',
+                Value : status_code,
+                Criticality : status.criticality,
+                CriticalityRepresentation : #WithIcon,
             },
             {
                 $Type : 'UI.DataField',
-                Label : '{i18n>Statuscode}',
-                Value : status_code,
+                Label : '{i18n>Stock}',
+                Value : stock,
             },
         ],
     },
@@ -44,13 +41,13 @@ annotate service.Books with @(
         },
         {
             $Type : 'UI.ReferenceFacet',
-            Label : 'Entry Information',
+            Label : '{i18n>EntryInformation}',
             ID : 'EntryInformation',
             Target : '@UI.FieldGroup#EntryInformation',
         },
         {
             $Type : 'UI.ReferenceFacet',
-            Label : 'Chapters',
+            Label : '{i18n>Chapters}',
             ID : 'Chapters',
             Target : 'Chapters/@UI.LineItem#Chapters',
         },
@@ -81,17 +78,30 @@ annotate service.Books with @(
             Label : '{i18n>Pages}',
             Value : pages,
         },
+        {
+            $Type : 'UI.DataField',
+            Value : stock,
+            Label : '{i18n>Stock}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : status_code,
+            Label : '{i18n>Status}',
+            Criticality : status.criticality,
+            CriticalityRepresentation : #WithIcon,
+        },
     ],
     UI.SelectionFields : [
         price,
+        status_code,
     ],
     UI.HeaderInfo : {
         Title : {
             $Type : 'UI.DataField',
             Value : title,
         },
-        TypeName : 'Book',
-        TypeNamePlural : 'Books',
+        TypeName : '{i18n>Book}',
+        TypeNamePlural : '{i18n>Books}',
         Description : {
             $Type : 'UI.DataField',
             Value : genre,
@@ -104,18 +114,22 @@ annotate service.Books with @(
             {
                 $Type : 'UI.DataField',
                 Value : createdAt,
+                Label : '{i18n>CreatedAt}',
             },
             {
                 $Type : 'UI.DataField',
                 Value : createdBy,
+                Label : '{i18n>UserID}',
             },
             {
                 $Type : 'UI.DataField',
                 Value : modifiedAt,
+                Label : '{i18n>ChangedAt}',
             },
             {
                 $Type : 'UI.DataField',
                 Value : modifiedBy,
+                Label : '{i18n>UserID}',
             },
         ],
     },
@@ -140,25 +154,23 @@ annotate service.Books with {
 };
 
 annotate service.Books with {
-    status @Common.ValueList : {
-        $Type : 'Common.ValueListType',
-        CollectionPath : 'Bookstatus',
-        Parameters : [
-            {
-                $Type : 'Common.ValueListParameterInOut',
-                LocalDataProperty : status_code,
-                ValueListProperty : 'code',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'criticality',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'displayText',
-            },
-        ],
-    }
+    status @(
+        Common.Text : status.displayText,
+        Common.Label : '{i18n>Status}',
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Bookstatus',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : status_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+        Common.Text.@UI.TextArrangement : #TextOnly,
+        )
 };
 
 annotate service.Books with {
@@ -170,18 +182,25 @@ annotate service.Chapters with @(
         {
             $Type : 'UI.DataField',
             Value : book.Chapters.number,
-            Label : 'Number',
+            Label : '{i18n>Number}',
         },
         {
             $Type : 'UI.DataField',
             Value : book.Chapters.title,
-            Label : 'Title',
+            Label : '{i18n>Title1}',
         },
         {
             $Type : 'UI.DataField',
             Value : book.Chapters.pages,
-            Label : 'Pages',
+            Label : '{i18n>Pages}',
         },
     ]
 );
+
+annotate service.Bookstatus with {
+    code @(
+        Common.Text : displayText,
+        Common.Text.@UI.TextArrangement : #TextOnly,
+    )
+};
 
