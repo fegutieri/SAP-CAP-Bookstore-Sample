@@ -1,0 +1,11 @@
+ID,name,createdAt,createdBy,modifiedAt,modifiedBy
+6f3bca7c-6b35-4b70-9d72-6fef4f5f6a01,J.K. Rowling,2024-01-01T10:00:00Z,system,2024-01-10T12:00:00Z,system
+4d8a9f02-ec4a-4f2f-8fd5-bebf66c3d502,J.R.R. Tolkien,2024-01-01T10:05:00Z,system,2024-01-10T12:05:00Z,system
+1b0a8b99-2b16-4c42-8b7c-69eebfa4a903,George Orwell,2024-01-01T10:10:00Z,system,2024-01-10T12:10:00Z,system
+9cb5fa4f-4e18-46ff-88a9-d4c84fbd1a04,Frank Herbert,2024-01-01T10:15:00Z,system,2024-01-10T12:15:00Z,system
+2c64c5ab-55f1-4f6e-8fd9-3dcb1e7fcb05,Harper Lee,2024-01-01T10:20:00Z,system,2024-01-10T12:20:00Z,system
+b96cdb1f-07cc-4a44-9f31-1a98eeb6b606,Dan Brown,2024-01-01T10:25:00Z,system,2024-01-10T12:25:00Z,system
+de6a0b5e-25b1-49c9-b6c3-79d7f229ff07,Stephen King,2024-01-01T10:30:00Z,system,2024-01-10T12:30:00Z,system
+55e4dc6c-8cdd-40f0-b46c-27c2ef8de108,Agatha Christie,2024-01-01T10:35:00Z,system,2024-01-10T12:35:00Z,system
+77cbd7d0-9b43-4a90-9ec1-9249bbf92a09,F. Scott Fitzgerald,2024-01-01T10:40:00Z,system,2024-01-10T12:40:00Z,system
+f18ed64c-4c7c-4a0e-9d4f-4ff9a6bfa510,Yuval Noah Harari,2024-01-01T10:45:00Z,system,2024-01-10T12:45:00Z,system

@@ -1,0 +1,6 @@
+ID,book_ID,number,title,pages,createdAt,createdBy,modifiedAt,modifiedBy
+1a91e3f3-41f2-4b5b-b9d1-2e16f77b0101,7a8d3f63-7bb1-4d67-9b87-90b4cba57f01,1,The Boy Who Lived,18,2024-03-01T10:00:00Z,system,2024-03-05T10:00:00Z,system
+5f9cb0c4-9bc3-4b4c-9c7e-f37c73c10202,7a8d3f63-7bb1-4d67-9b87-90b4cba57f01,2,The Vanishing Glass,16,2024-03-01T10:05:00Z,system,2024-03-05T10:05:00Z,system
+e32d11ef-bcdd-4e5f-b3df-44b5d4b50303,4bcbe203-2c89-4db6-a5a4-93a61d98db02,1,An Unexpected Party,27,2024-03-01T10:10:00Z,system,2024-03-05T10:10:00Z,system
+a91a0ed7-9b59-4b19-9f62-3bfa0c5c0404,4bcbe203-2c89-4db6-a5a4-93a61d98db02,2,Roast Mutton,23,2024-03-01T10:15:00Z,system,2024-03-05T10:15:00Z,system
+c1f3d92b-8d8b-4e94-b7b5-2d1eae2c0505,f1b9b9c4-6b4c-4fa2-83a1-8c0a4bcb5303,1,The Principles of Newspeak,20,2024-03-01T10:20:00Z,system,2024-03-05T10:20:00Z,system

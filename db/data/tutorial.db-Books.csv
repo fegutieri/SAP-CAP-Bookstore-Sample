@@ -1,0 +1,11 @@
+ID,title,author_ID,genre,publishedAt,pages,price,stock,status_code,createdAt,createdBy,modifiedAt,modifiedBy
+7a8d3f63-7bb1-4d67-9b87-90b4cba57f01,Harry Potter and the Sorcerer's Stone,6f3bca7c-6b35-4b70-9d72-6fef4f5f6a01,Fantasy,1997-06-26,309,39.90,25,A,2024-02-01T10:00:00Z,system,2024-02-10T10:00:00Z,system
+4bcbe203-2c89-4db6-a5a4-93a61d98db02,The Hobbit,4d8a9f02-ec4a-4f2f-8fd5-bebf66c3d502,Fantasy,1937-09-21,310,45.00,18,A,2024-02-01T10:05:00Z,system,2024-02-10T10:05:00Z,system
+f1b9b9c4-6b4c-4fa2-83a1-8c0a4bcb5303,1984,1b0a8b99-2b16-4c42-8b7c-69eebfa4a903,Dystopian,1949-06-08,328,29.90,7,L,2024-02-01T10:10:00Z,system,2024-02-10T10:10:00Z,system
+3c8c3b5a-3f39-4b3f-b2d2-f0dcf6d1c104,Dune,9cb5fa4f-4e18-46ff-88a9-d4c84fbd1a04,Science Fiction,1965-08-01,412,49.90,11,A,2024-02-01T10:15:00Z,system,2024-02-10T10:15:00Z,system
+8dbdf3a7-48c4-4e8b-bb36-52a1f0a7f205,To Kill a Mockingbird,2c64c5ab-55f1-4f6e-8fd9-3dcb1e7fcb05,Classic,1960-07-11,281,34.90,0,U,2024-02-01T10:20:00Z,system,2024-02-10T10:20:00Z,system
+21ac0b93-dbf5-44b2-9d35-6f3d2b34e506,The Da Vinci Code,b96cdb1f-07cc-4a44-9f31-1a98eeb6b606,Thriller,2003-04-01,454,39.50,6,L,2024-02-01T10:25:00Z,system,2024-02-10T10:25:00Z,system
+e14e49a6-bd42-4d5e-a9de-97e5e9b9a707,The Shining,de6a0b5e-25b1-49c9-b6c3-79d7f229ff07,Horror,1977-01-28,447,42.00,2,L,2024-02-01T10:30:00Z,system,2024-02-10T10:30:00Z,system
+1fd53d51-fab5-4c49-b93f-8a6a7fbbf808,Murder on the Orient Express,55e4dc6c-8cdd-40f0-b46c-27c2ef8de108,Mystery,1934-01-01,256,31.90,14,A,2024-02-01T10:35:00Z,system,2024-02-10T10:35:00Z,system
+0f32db94-8f3b-4ec1-95f6-5bb2c60c1c09,The Great Gatsby,77cbd7d0-9b43-4a90-9ec1-9249bbf92a09,Classic,1925-04-10,180,27.90,5,L,2024-02-01T10:40:00Z,system,2024-02-10T10:40:00Z,system
+9f2a93c1-5a88-4f99-91d2-b9d4a3fda910,Sapiens,f18ed64c-4c7c-4a0e-9d4f-4ff9a6bfa510,History,2011-01-01,498,54.90,20,A,2024-02-01T10:45:00Z,system,2024-02-10T10:45:00Z,system
